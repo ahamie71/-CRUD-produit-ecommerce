@@ -1,0 +1,30 @@
+<!-- Display the list of products -->
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Reference</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <!-- Use PHP to fetch and display products from the database -->
+  <?php
+  // Connect to the database (same as create.php)
+  // ...
+
+  // Fetch products from the database
+  
+  while ($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    echo "<td>" . $row["idProduct"] . "</td>";
+    echo "<td>" . $row["reference"] . "</td>";
+    echo "<td>" . $row["description"] . "</td>";
+    echo "<td><a href='delete.php?id=" . $row["idProduct"] . "'>Delete</a></td>";
+    echo "</tr>";
+  }
+
+  // Close the database connection (same as create.php)
+  // ...
+  ?>
+</table>
+
+

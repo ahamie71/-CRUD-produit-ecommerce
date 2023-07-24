@@ -1,0 +1,310 @@
+{
+    "sourceFile": "index.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 73,
+            "patches": [
+                {
+                    "date": 1690217586493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690217606836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n if (isset($_GET['action'])){\n \n-  if ($_GET['action'] == 'display') {\n+  \n          require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n"
+                },
+                {
+                    "date": 1690217612057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n          require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n-}\n+\n else{\n \n     echo \"error\";\n \n"
+                },
+                {
+                    "date": 1690217621406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php \n \n \n-if (isset($_GET['action'])){\n \n+\n   \n          require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n"
+                },
+                {
+                    "date": 1690217641110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n \n \n \n   \n-         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n          getProducts(); \n-    }\n+    \n \n \n else{\n \n"
+                },
+                {
+                    "date": 1690217646227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n <?php \n-\n-\n-\n-\n   \n          require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n          getProducts(); \n     \n"
+                },
+                {
+                    "date": 1690217681371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n <?php \n-  \n-         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+\n+\n+if (isset($_GET['action'])){\n+\n+  if ($_GET['action'] == 'display' ) {\n+         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n-    \n+    }\n \n-\n+}\n else{\n \n     echo \"error\";\n \n"
+                },
+                {
+                    "date": 1690217805223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n if (isset($_GET['action'])){\n \n-  if ($_GET['action'] == 'display' ) {\n+  if ($_GET['action'] == 'display') {\n          require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n"
+                },
+                {
+                    "date": 1690218024080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] == 'display') {\n-         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n"
+                },
+                {
+                    "date": 1690218056334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] == 'display') {\n-         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n"
+                },
+                {
+                    "date": 1690218106307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n if (isset($_GET['action'])){\n \n-  if ($_GET['action'] == 'display') {\n+  if ($_GET['action'] =='display') {\n          require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n"
+                },
+                {
+                    "date": 1690218111559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n }\n else{\n \n-    echo \"error\";\n+    \n \n }\n \n \n"
+                },
+                {
+                    "date": 1690218122792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n \n }\n else{\n \n-    \n+    require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+         getProducts(); \n \n }\n \n \n"
+                },
+                {
+                    "date": 1690218136003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,9 @@\n \n }\n else{\n \n-    require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n-         getProducts(); \n+    \n \n }\n \n \n"
+                },
+                {
+                    "date": 1690218170180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] =='display') {\n-         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n"
+                },
+                {
+                    "date": 1690218178471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,16 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] =='display') {\n-         require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__,1) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n-else{\n \n-    \n \n-}\n \n-\n // if ($_GET['action'] == 'Home') {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php'); \n    \n \n"
+                },
+                {
+                    "date": 1690218189302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] =='display') {\n-         require_once(dirname(__FILE__,1) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n"
+                },
+                {
+                    "date": 1690218219435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] =='display') {\n-         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n"
+                },
+                {
+                    "date": 1690218530984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n if (isset($_GET['action'])){\n \n   if ($_GET['action'] =='display') {\n-         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+         require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n          getProducts(); \n     }\n \n }\n"
+                },
+                {
+                    "date": 1690222560685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,9 @@\n }\n \n \n \n-// if ($_GET['action'] == 'Home') {\n-//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php'); \n-   \n \n-// }\n \n // if ($_GET['action'] == 'createArticle' ) {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     \n"
+                },
+                {
+                    "date": 1690222567267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,12 @@\n \n \n \n \n-// if ($_GET['action'] == 'createArticle' ) {\n-//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+if ($_GET['action'] == 'createArticle' ) {\n+    require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     \n-// }\n+ }\n \n // if ($_GET['action'] == 'Edit' ) {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n    \n"
+                },
+                {
+                    "date": 1690222603718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n \n \n \n \n-if ($_GET['action'] == 'createArticle' ) {\n+if ($_GET['action'] == 'create' ) {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    \n+    addProuct()\n  }\n \n // if ($_GET['action'] == 'Edit' ) {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n"
+                },
+                {
+                    "date": 1690223790096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n \n if ($_GET['action'] == 'create' ) {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    addProuct()\n+    addProduct()\n  }\n \n // if ($_GET['action'] == 'Edit' ) {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n"
+                },
+                {
+                    "date": 1690225882945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,12 @@\n \n \n if ($_GET['action'] == 'create' ) {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    addProduct()\n+    addProduct();\n  }\n \n-// if ($_GET['action'] == 'Edit' ) {\n+// if ($_GET['action'] == 'edit' ) {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n    \n // }\n \n"
+                },
+                {
+                    "date": 1690226059874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n  }\n \n // if ($_GET['action'] == 'edit' ) {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-   \n+       \n // }\n \n // if ($_GET['action'] == 'Delete') {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n"
+                },
+                {
+                    "date": 1690226065431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n     addProduct();\n  }\n \n // if ($_GET['action'] == 'edit' ) {\n-//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n        \n-// }\n+}\n \n // if ($_GET['action'] == 'Delete') {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     \n"
+                },
+                {
+                    "date": 1690226094709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,11 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     addProduct();\n  }\n \n-// if ($_GET['action'] == 'edit' ) {\n+ if ($_GET['action'] == 'edit' ) {\n require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-       \n+    mdofi   \n }\n \n // if ($_GET['action'] == 'Delete') {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n"
+                },
+                {
+                    "date": 1690226101554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n  }\n \n  if ($_GET['action'] == 'edit' ) {\n require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    mdofi   \n+    modifProduct   \n }\n \n // if ($_GET['action'] == 'Delete') {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n"
+                },
+                {
+                    "date": 1690227703587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,20 +9,16 @@\n     }\n \n }\n \n-\n-\n-\n-\n if ($_GET['action'] == 'create' ) {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     addProduct();\n  }\n \n  if ($_GET['action'] == 'edit' ) {\n require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    modifProduct   \n+    modifProduct();   \n }\n \n // if ($_GET['action'] == 'Delete') {\n //     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n"
+                },
+                {
+                    "date": 1690229102638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,12 @@\n require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     modifProduct();   \n }\n \n-// if ($_GET['action'] == 'Delete') {\n-//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+if ($_GET['action'] == 'Delete') {\n+    require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     \n-// }\n+}\n \n // }\n   \n // if ($_GET['action'] == 'logout') {\n"
+                },
+                {
+                    "date": 1690229109214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,15 +24,12 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     \n }\n \n-// }\n+\n   \n-// if ($_GET['action'] == 'logout') {\n-//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    \n-// }\n \n+\n //  else {\n // require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n \n // }\n"
+                },
+                {
+                    "date": 1690229124829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n \n   \n \n \n-//  else {\n-// require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n-\n-// }\n+ else {\n+require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+getProducts(); \n+}\n"
+                },
+                {
+                    "date": 1690229132200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     modifProduct();   \n }\n \n-if ($_GET['action'] == 'Delete') {\n+if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     \n }\n \n"
+                },
+                {
+                    "date": 1690229158059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n }\n \n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    \n+    DeletProduct()\n }\n \n \n   \n"
+                },
+                {
+                    "date": 1690229204327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,15 +21,15 @@\n }\n \n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    DeletProduct()\n+    DeletProduct();\n }\n \n \n   \n \n \n  else {\n-require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n+require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n getProducts(); \n }\n"
+                },
+                {
+                    "date": 1690229249846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,8 @@\n   \n \n \n  else {\n+    \n require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n getProducts(); \n }\n"
+                },
+                {
+                    "date": 1690229259271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n   \n \n \n  else {\n-    \n+    ($_GET['action'] =='display') \n require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n getProducts(); \n }\n"
+                },
+                {
+                    "date": 1690229265486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n   \n \n \n  else {\n-    ($_GET['action'] =='display') \n+    $_GET['action'] =='display'\n require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n getProducts(); \n }\n"
+                },
+                {
+                    "date": 1690229284114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n   \n \n \n  else {\n-    $_GET['action'] =='display'\n+   \n require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n getProducts(); \n }\n"
+                },
+                {
+                    "date": 1690229305918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,6 @@\n \n   \n \n \n- else {\n-   \n-require_once(dirname(__FILE__,) . '/Crud/ProduitController.php');\n-getProducts(); \n+ \n }\n"
+                },
+                {
+                    "date": 1690229313003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n   \n \n \n  \n-}\n+\n"
+                },
+                {
+                    "date": 1690229327669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n }\n+esl\n \n-\n   \n \n \n  \n"
+                },
+                {
+                    "date": 1690229332882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,14 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n }\n-esl\n \n+esle{\n+\n+\n+}\n+\n   \n \n \n  \n"
+                },
+                {
+                    "date": 1690229338752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,11 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n }\n \n-esle{\n+else{\n \n+    \n \n }\n \n   \n"
+                },
+                {
+                    "date": 1690229456815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,10 @@\n }\n \n else{\n \n-    \n+    require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n+         getProducts(); \n \n }\n \n   \n"
+                },
+                {
+                    "date": 1690229470140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n }\n \n else{\n \n-    require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n+      require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n          getProducts(); \n \n }\n \n"
+                },
+                {
+                    "date": 1690229481437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,39 +1,30 @@\n-<?php \n+<?php\n \n \n-if (isset($_GET['action'])){\n+if (isset($_GET['action'])) {\n \n-  if ($_GET['action'] =='display') {\n-         require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n-         getProducts(); \n+    if ($_GET['action'] == 'display') {\n+        require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+        getProducts();\n     }\n-\n }\n \n-if ($_GET['action'] == 'create' ) {\n+if ($_GET['action'] == 'create') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     addProduct();\n- }\n+}\n \n- if ($_GET['action'] == 'edit' ) {\n-require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    modifProduct();   \n+if ($_GET['action'] == 'edit') {\n+    require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+    modifProduct();\n }\n \n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n-}\n+} else {\n \n-else{\n+    require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+    getProducts();\n \n-      require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n-         getProducts(); \n-\n-}\n-\n-  \n-\n-\n- \n-\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229487118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n <?php\n \n-\n if (isset($_GET['action'])) {\n \n     if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n         getProducts();\n     }\n }\n-\n if ($_GET['action'] == 'create') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     addProduct();\n }\n"
+                },
+                {
+                    "date": 1690229500546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n-\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     getProducts();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229521611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n+    \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     getProducts();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229570671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n-    \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     getProducts();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229578678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,8 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n-    require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    getProducts();\n+    \n+  \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229584574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n     \n-  \n+  ''\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229592737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n     \n-  ''\n \n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229598053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n     \n+  \n \n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229605300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } else {\n     \n-  \n+    require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229611306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,7 @@\n     DeletProduct();\n } else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n+    \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229618799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,7 @@\n     DeletProduct();\n } else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    \n+    Acceuil\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229636786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n         getProducts();\n     }\n-}\n+\n if ($_GET['action'] == 'create') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     addProduct();\n }\n@@ -22,7 +22,7 @@\n     DeletProduct();\n } else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    Acceuil\n+    AcceuilProduct();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229643256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,11 @@\n \n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n-} else {\n+} \n+\n+else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n\\ No newline at end of file\n     AcceuilProduct();\n \n-}\n"
+                },
+                {
+                    "date": 1690229659367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,7 @@\n \n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    AcceuilProduct();\n+     get\n+}\n+}\n"
+                },
+                {
+                    "date": 1690229669066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n \n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-     get\n+    getProducts();\n }\n }\n"
+                },
+                {
+                    "date": 1690229678378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n \n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    getProducts();\n+    \n }\n }\n"
+                },
+                {
+                    "date": 1690229756316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,14 @@\n         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n         getProducts();\n     }\n \n+    if ($_GET['action'] == 'Home') {\n+        require_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php'); \n+        homepage();\n+    \n+    }\n+\n if ($_GET['action'] == 'create') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     addProduct();\n }\n"
+                },
+                {
+                    "date": 1690229772828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n         getProducts();\n     }\n \n-    if ($_GET['action'] == 'Home') {\n+    if ($_GET['action'] == '') {\n         require_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php'); \n         homepage();\n     \n     }\n"
+                },
+                {
+                    "date": 1690229782295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n         getProducts();\n     }\n \n-    if ($_GET['action'] == '') {\n+    if ($_GET['action'] == 'Home') {\n         require_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php'); \n         homepage();\n     \n     }\n"
+                },
+                {
+                    "date": 1690229789805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n \n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    \n+     Acceui\n }\n }\n"
+                },
+                {
+                    "date": 1690229815172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n \n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-     Acceui\n+    \n }\n }\n"
+                },
+                {
+                    "date": 1690229822373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,7 @@\n \n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n-    \n+    Acceuil();\n }\n }\n"
+                },
+                {
+                    "date": 1690229982501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         getProducts();\n     }\n \n     if ($_GET['action'] == 'Home') {\n-        require_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php'); \n+        require_once(dirname(__FILE__) . '/s.php'); \n         homepage();\n     \n     }\n \n"
+                },
+                {
+                    "date": 1690229990906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         getProducts();\n     }\n \n     if ($_GET['action'] == 'Home') {\n-        require_once(dirname(__FILE__) . '/s.php'); \n+        require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n         homepage();\n     \n     }\n \n"
+                },
+                {
+                    "date": 1690229995945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     }\n \n     if ($_GET['action'] == 'Home') {\n         require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n-        homepage();\n+        Acceuil\n     \n     }\n \n if ($_GET['action'] == 'create') {\n"
+                },
+                {
+                    "date": 1690230081062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     }\n \n     if ($_GET['action'] == 'Home') {\n         require_once(dirname(__FILE__) .'/Crud/ProduitController.php');\n-        Acceuil\n+        Acceuil();\n     \n     }\n \n if ($_GET['action'] == 'create') {\n@@ -32,5 +32,6 @@\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     Acceuil();\n }\n+\n }\n"
+                },
+                {
+                    "date": 1690230102260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n if ($_GET['action'] == 'delete') {\n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     DeletProduct();\n } \n-\n+}\n else {\n     \n     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n     Acceuil();\n"
+                }
+            ],
+            "date": 1690217586493,
+            "name": "Commit-0",
+            "content": "<?php \n\n\nif (isset($_GET['action'])){\n\n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n         getProducts(); \n    }\n\n}\nelse{\n\n    echo \"error\";\n\n}\n\n\n// if ($_GET['action'] == 'Home') {\n//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php'); \n   \n\n// }\n\n// if ($_GET['action'] == 'createArticle' ) {\n//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n    \n// }\n\n// if ($_GET['action'] == 'Edit' ) {\n//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n   \n// }\n\n// if ($_GET['action'] == 'Delete') {\n//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n    \n// }\n\n// }\n  \n// if ($_GET['action'] == 'logout') {\n//     require_once(dirname(__FILE__) . '/Crud/ProduitController.php');\n    \n// }\n\n//  else {\n// require_once(dirname(__FILE__,2) . '/Crud/ProduitController.php');\n\n// }\n"
+        }
+    ]
+}

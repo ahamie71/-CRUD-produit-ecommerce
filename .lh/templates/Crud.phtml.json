@@ -1,0 +1,102 @@
+{
+    "sourceFile": "templates/Crud.phtml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1690216591065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690216605526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,30 @@\n-<?php\n+<!-- Display the list of products -->\n+<table>\n+  <tr>\n+    <th>ID</th>\n+    <th>Reference</th>\n+    <th>Description</th>\n+    <th>Action</th>\n+  </tr>\n+  <!-- Use PHP to fetch and display products from the database -->\n+  <?php\n+  // Connect to the database (same as create.php)\n+  // ...\n \n+  // Fetch products from the database\n+  \n+  while ($row = mysqli_fetch_assoc($result)) {\n+    echo \"<tr>\";\n+    echo \"<td>\" . $row[\"idProduct\"] . \"</td>\";\n+    echo \"<td>\" . $row[\"reference\"] . \"</td>\";\n+    echo \"<td>\" . $row[\"description\"] . \"</td>\";\n+    echo \"<td><a href='delete.php?id=\" . $row[\"idProduct\"] . \"'>Delete</a></td>\";\n+    echo \"</tr>\";\n+  }\n+\n+  // Close the database connection (same as create.php)\n+  // ...\n+  ?>\n+</table>\n+\n+\n"
+                },
+                {
+                    "date": 1690216617529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,15 +12,9 @@\n   // ...\n \n   // Fetch products from the database\n   \n-  while ($row = mysqli_fetch_assoc($result)) {\n-    echo \"<tr>\";\n-    echo \"<td>\" . $row[\"idProduct\"] . \"</td>\";\n-    echo \"<td>\" . $row[\"reference\"] . \"</td>\";\n-    echo \"<td>\" . $row[\"description\"] . \"</td>\";\n-    echo \"<td><a href='delete.php?id=\" . $row[\"idProduct\"] . \"'>Delete</a></td>\";\n-    echo \"</tr>\";\n+  \n   }\n \n   // Close the database connection (same as create.php)\n   // ...\n"
+                },
+                {
+                    "date": 1690216869321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n <!-- Display the list of products -->\n+\n+\n+\n <table>\n   <tr>\n     <th>ID</th>\n     <th>Reference</th>\n@@ -13,9 +16,9 @@\n \n   // Fetch products from the database\n   \n   \n-  }\n+  \n \n   // Close the database connection (same as create.php)\n   // ...\n   ?>\n"
+                },
+                {
+                    "date": 1690216886994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n-<!-- Display the list of products -->\n \n \n \n+\n+\n <table>\n   <tr>\n     <th>ID</th>\n     <th>Reference</th>\n"
+                },
+                {
+                    "date": 1690216893772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,20 @@\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+<head>\n+    <meta charset=\"UTF-8\">\n+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+    <title>Document</title>\n+</head>\n+<body>\n+    \n+</body>\n+</html>\n \n \n \n \n-\n <table>\n   <tr>\n     <th>ID</th>\n     <th>Reference</th>\n"
+                },
+                {
+                    "date": 1690216901943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,15 +13,9 @@\n \n \n \n \n-<table>\n-  <tr>\n-    <th>ID</th>\n-    <th>Reference</th>\n-    <th>Description</th>\n-    <th>Action</th>\n-  </tr>\n+\n   <!-- Use PHP to fetch and display products from the database -->\n   <?php\n   // Connect to the database (same as create.php)\n   // ...\n"
+                },
+                {
+                    "date": 1690216990924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,19 +15,7 @@\n \n \n \n   <!-- Use PHP to fetch and display products from the database -->\n-  <?php\n-  // Connect to the database (same as create.php)\n-  // ...\n+ \n \n-  // Fetch products from the database\n-  \n-  \n-  \n \n-  // Close the database connection (same as create.php)\n-  // ...\n-  ?>\n-</table>\n-\n-\n"
+                },
+                {
+                    "date": 1690216998723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,16 +6,44 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    \n+<table class=\"table\">\n+  <thead>\n+    <tr>\n+      <th scope=\"col\">#</th>\n+      <th scope=\"col\">First</th>\n+      <th scope=\"col\">Last</th>\n+      <th scope=\"col\">Handle</th>\n+    </tr>\n+  </thead>\n+  <tbody>\n+    <tr>\n+      <th scope=\"row\">1</th>\n+      <td>Mark</td>\n+      <td>Otto</td>\n+      <td>@mdo</td>\n+    </tr>\n+    <tr>\n+      <th scope=\"row\">2</th>\n+      <td>Jacob</td>\n+      <td>Thornton</td>\n+      <td>@fat</td>\n+    </tr>\n+    <tr>\n+      <th scope=\"row\">3</th>\n+      <td colspan=\"2\">Larry the Bird</td>\n+      <td>@twitter</td>\n+    </tr>\n+  </tbody>\n+</table> \n+\n </body>\n </html>\n \n \n \n \n \n-  <!-- Use PHP to fetch and display products from the database -->\n- \n+  \n \n \n"
+                },
+                {
+                    "date": 1690218578465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,45 +5,4 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n-<body>\n-<table class=\"table\">\n-  <thead>\n-    <tr>\n-      <th scope=\"col\">#</th>\n-      <th scope=\"col\">First</th>\n-      <th scope=\"col\">Last</th>\n-      <th scope=\"col\">Handle</th>\n-    </tr>\n-  </thead>\n-  <tbody>\n-    <tr>\n-      <th scope=\"row\">1</th>\n-      <td>Mark</td>\n-      <td>Otto</td>\n-      <td>@mdo</td>\n-    </tr>\n-    <tr>\n-      <th scope=\"row\">2</th>\n-      <td>Jacob</td>\n-      <td>Thornton</td>\n-      <td>@fat</td>\n-    </tr>\n-    <tr>\n-      <th scope=\"row\">3</th>\n-      <td colspan=\"2\">Larry the Bird</td>\n-      <td>@twitter</td>\n-    </tr>\n-  </tbody>\n-</table> \n-\n-</body>\n-</html>\n-\n-\n-\n-\n-\n-  \n-\n-\n"
+                },
+                {
+                    "date": 1690218585465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,29 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n+<\n+<table>\n+    <thead>\n+        <th>ID</th>\n+        <th>Nom</th>\n+        <th>Prix</th>\n+        <th>Stock</th>\n+        <th>Actions</th>\n+    </thead>\n+    <tbody>\n+        <?php\n+        foreach($result as $produit){\n+            ?>\n+            <tr>\n+                <td><?= $produit['id'] ?></td>\n+                <td><?= $produit['produit'] ?></td>\n+                <td><?= $produit['prix'] ?></td>\n+                <td><?= $produit['nombre'] ?></td>\n+                <td><a href=\"details.php?id=<?= $produit['id'] ?>\">Voir</a>  <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n+            </tr>\n+            <?php\n+        }\n+        ?>\n+    </tbody>\n+</table>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218592326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n-<\n+<bo\n <table>\n     <thead>\n         <th>ID</th>\n         <th>Nom</th>\n"
+                },
+                {
+                    "date": 1690218602948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n-<bo\n+<body>\n <table>\n     <thead>\n         <th>ID</th>\n         <th>Nom</th>\n@@ -16,9 +16,9 @@\n         <th>Actions</th>\n     </thead>\n     <tbody>\n         <?php\n-        foreach($result as $produit){\n+        foreach($products as $produit){\n             ?>\n             <tr>\n                 <td><?= $produit['id'] ?></td>\n                 <td><?= $produit['produit'] ?></td>\n"
+                },
+                {
+                    "date": 1690218632619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,9 @@\n         foreach($products as $produit){\n             ?>\n             <tr>\n                 <td><?= $produit['id'] ?></td>\n-                <td><?= $produit['produit'] ?></td>\n-                <td><?= $produit['prix'] ?></td>\n-                <td><?= $produit['nombre'] ?></td>\n+               \n                 <td><a href=\"details.php?id=<?= $produit['id'] ?>\">Voir</a>  <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n             </tr>\n             <?php\n         }\n"
+                },
+                {
+                    "date": 1690218637947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             ?>\n             <tr>\n                 <td><?= $produit['id'] ?></td>\n                \n-                <td><a href=\"details.php?id=<?= $produit['id'] ?>\">Voir</a>  <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n+                <td><a href=\">Voir</a>  <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n             </tr>\n             <?php\n         }\n         ?>\n"
+                },
+                {
+                    "date": 1690218643298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             ?>\n             <tr>\n                 <td><?= $produit['id'] ?></td>\n                \n-                <td><a href=\">Voir</a>  <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n+                <td><a href=\"\">Voir</a> <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n             </tr>\n             <?php\n         }\n         ?>\n"
+                },
+                {
+                    "date": 1690218648579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             ?>\n             <tr>\n                 <td><?= $produit['id'] ?></td>\n                \n-                <td><a href=\"\">Voir</a> <a href=\"edit.php?id=<?= $produit['id'] ?>\">Modifier</a>  <a href=\"delete.php?id=<?= $produit['id'] ?>\">Supprimer</a></td>\n+               \n             </tr>\n             <?php\n         }\n         ?>\n"
+                },
+                {
+                    "date": 1690218659312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n         <?php\n         foreach($products as $produit){\n             ?>\n             <tr>\n-                <td><?= $produit['id'] ?></td>\n+                <td><?= $produit['idP'] ?></td>\n                \n-               \n+            \n             </tr>\n             <?php\n         }\n         ?>\n"
+                },
+                {
+                    "date": 1690218868546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,22 +6,23 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-<table>\n-    <thead>\n-        <th>ID</th>\n-        <th>Nom</th>\n-        <th>Prix</th>\n-        <th>Stock</th>\n-        <th>Actions</th>\n-    </thead>\n+<table class=\"table\">\n+  <thead>\n+    <tr>\n+      <th scope=\"col\">#</th>\n+      <th scope=\"col\">First</th>\n+      <th scope=\"col\">Last</th>\n+      <th scope=\"col\">Handle</th>\n+    </tr>\n+  </thead>\n     <tbody>\n         <?php\n         foreach($products as $produit){\n             ?>\n             <tr>\n-                <td><?= $produit['idP'] ?></td>\n+                <td><?= $produit['idProduct'] ?></td>\n                \n             \n             </tr>\n             <?php\n"
+                },
+                {
+                    "date": 1690218898312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,16 @@\n <head>\n     <meta charset=\"UTF-8\">\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+    \n     <title>Document</title>\n </head>\n <body>\n <table class=\"table\">\n   <thead>\n     <tr>\n-      <th scope=\"col\">#</th>\n+      <th scope=\"col\">id</th>\n       <th scope=\"col\">First</th>\n       <th scope=\"col\">Last</th>\n       <th scope=\"col\">Handle</th>\n     </tr>\n"
+                },
+                {
+                    "date": 1690218917301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n     <title>Document</title>\n </head>\n <body>\n-    <div\n+    <div>\n <table class=\"table\">\n   <thead>\n     <tr>\n       <th scope=\"col\">id</th>\n"
+                },
+                {
+                    "date": 1690219795603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n \t\t\t\t\t\t\t<i class=\"fa fa-trash fa-2x red-icon\"></i>\n \t\t\t\t\t\t</a>\n \n                       \n-            </\n+                </td>\n             </tr>\n             <?php\n         }\n         ?>\n"
+                }
+            ],
+            "date": 1690216591065,
+            "name": "Commit-0",
+            "content": "<?php\n\n"
+        }
+    ]
+}

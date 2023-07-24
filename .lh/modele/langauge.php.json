@@ -1,0 +1,114 @@
+{
+    "sourceFile": "modele/langauge.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1690223907241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690224047607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,22 @@\n <?php\n \n include \"db.php\";\n \n+function getCategory(){\n+    \n+    $db = connectionDataBase();\n+    $stmt = $db->prepare(\"SELECT * FROM categories \");\n+    $stmt->execute();\n+    $categories = [];\n+    while (($row = $stmt->fetch())) {\n+        $categorie = [\n+\n+            'name' => $row['name'],\n+            'id' => $row['id'],\n+            'description' => $row['description'],\n+          \n+        ];\n+        $categories[] = $categorie;\n+    }\n+    return $categories;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224053433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n include \"db.php\";\n \n-function getCategory(){\n+function getla(){\n     \n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n"
+                },
+                {
+                    "date": 1690224063666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n <?php\n \n include \"db.php\";\n \n-function getla(){\n+function getlanguage(){\n     \n     $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT * FROM categories \");\n+    $stmt = $db->prepare(\"SELECT * FROM languages \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n         $categorie = [\n"
+                },
+                {
+                    "date": 1690224070229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     $stmt = $db->prepare(\"SELECT * FROM languages \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n-        $categorie = [\n+        $languages= [\n \n             'name' => $row['name'],\n             'id' => $row['id'],\n             'description' => $row['description'],\n"
+                },
+                {
+                    "date": 1690224075686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n             'id' => $row['id'],\n             'description' => $row['description'],\n           \n         ];\n-        $categories[] = $categorie;\n+        $categories[] = $languages;\n     }\n     return $categories;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224083180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n         $languages= [\n \n-            'name' => $row['name'],\n+           \n             'id' => $row['id'],\n-            'description' => $row['description'],\n+            'des' => $row['description'],\n           \n         ];\n         $categories[] = $languages;\n     }\n"
+                },
+                {
+                    "date": 1690224096268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     while (($row = $stmt->fetch())) {\n         $languages= [\n \n            \n-            'id' => $row['id'],\n+            'id' => $row['idLang'],\n             'des' => $row['description'],\n           \n         ];\n         $categories[] = $languages;\n"
+                },
+                {
+                    "date": 1690224103258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         $languages= [\n \n            \n             'id' => $row['idLang'],\n-            'des' => $row['description'],\n+            'des' => $row['Langua'],\n           \n         ];\n         $categories[] = $languages;\n     }\n"
+                },
+                {
+                    "date": 1690224108314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         $languages= [\n \n            \n             'id' => $row['idLang'],\n-            'des' => $row['Langua'],\n+            'des' => $row['LanguageName'],\n           \n         ];\n         $categories[] = $languages;\n     }\n"
+                },
+                {
+                    "date": 1690224117293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n     while (($row = $stmt->fetch())) {\n         $languages= [\n \n            \n-            'id' => $row['idLang'],\n-            'des' => $row['LanguageName'],\n+            'idLang' => $row['idLang'],\n+            '' => $row['LanguageName'],\n           \n         ];\n         $categories[] = $languages;\n     }\n"
+                },
+                {
+                    "date": 1690224129743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n         $languages= [\n \n            \n             'idLang' => $row['idLang'],\n-            '' => $row['LanguageName'],\n+            'LanguageName' => $row['LanguageName'],\n           \n         ];\n-        $categories[] = $languages;\n+        $langag[] = $languages;\n     }\n     return $categories;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224138918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n             'idLang' => $row['idLang'],\n             'LanguageName' => $row['LanguageName'],\n           \n         ];\n-        $langag[] = $languages;\n+        $language[] = $languages;\n     }\n-    return $categories;\n+    return $lan;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224239717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,6 @@\n           \n         ];\n         $language[] = $languages;\n     }\n-    return $lan;\n+    return $languages;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224365184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n function getlanguage(){\n     \n     $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT * FROM languages \");\n+    $stmt = $db->prepare(\"SELECT * FROM Languages \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n         $languages= [\n@@ -17,6 +17,6 @@\n           \n         ];\n         $language[] = $languages;\n     }\n-    return $languages;\n+    return $language;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224375456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM Languages \");\n     $stmt->execute();\n-    $categories = [];\n+    $languages = [];\n     while (($row = $stmt->fetch())) {\n         $languages= [\n \n            \n"
+                },
+                {
+                    "date": 1690224401304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n             'idLang' => $row['idLang'],\n             'LanguageName' => $row['LanguageName'],\n           \n         ];\n-        $language[] = $languages;\n+        $languages[] = $languages;\n     }\n     return $language;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224421848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM Languages \");\n     $stmt->execute();\n-    $languages = [];\n+    $Languages = [];\n     while (($row = $stmt->fetch())) {\n         $languages= [\n \n            \n@@ -17,6 +17,6 @@\n           \n         ];\n         $languages[] = $languages;\n     }\n-    return $language;\n+    return $languages;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224472062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,17 +6,17 @@\n     \n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM Languages \");\n     $stmt->execute();\n-    $Languages = [];\n+    $languages = [];\n     while (($row = $stmt->fetch())) {\n         $languages= [\n \n            \n             'idLang' => $row['idLang'],\n             'LanguageName' => $row['LanguageName'],\n           \n         ];\n-        $languages[] = $languages;\n+        $Languages[] = $languages;\n     }\n     return $languages;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224525363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,4 @@\n <?php\n \n include \"db.php\";\n \n-function getlanguage(){\n-    \n-    $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT * FROM Languages \");\n-    $stmt->execute();\n-    $languages = [];\n-    while (($row = $stmt->fetch())) {\n-        $languages= [\n-\n-           \n-            'idLang' => $row['idLang'],\n-            'LanguageName' => $row['LanguageName'],\n-          \n-        ];\n-        $Languages[] = $languages;\n-    }\n-    return $languages;\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224532742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,21 @@\n <?php\n \n include \"db.php\";\n \n+function getAllLanguages()\n+{\n+    // Assuming you have already established a database connection using the connectionDataBase() function\n+    $db = connectionDataBase();\n+\n+    // Prepare the SQL query\n+    $query = $db->prepare(\"SELECT * FROM languages\");\n+\n+    // Execute the query\n+    $query->execute();\n+\n+   \n+    $languages = $query->fetchAll(PDO::FETCH_ASSOC);\n+\n+    \n+    return $languages;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690224542120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,15 @@\n include \"db.php\";\n \n function getAllLanguages()\n {\n-    // Assuming you have already established a database connection using the connectionDataBase() function\n+    ion using the connectionDataBase() function\n     $db = connectionDataBase();\n \n-    // Prepare the SQL query\n+    \n     $query = $db->prepare(\"SELECT * FROM languages\");\n \n-    // Execute the query\n+    \n     $query->execute();\n \n    \n     $languages = $query->fetchAll(PDO::FETCH_ASSOC);\n"
+                },
+                {
+                    "date": 1690224549258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,11 @@\n include \"db.php\";\n \n function getAllLanguages()\n {\n-    ion using the connectionDataBase() function\n+   \n     $db = connectionDataBase();\n \n-    \n     $query = $db->prepare(\"SELECT * FROM languages\");\n \n     \n     $query->execute();\n"
+                },
+                {
+                    "date": 1690224555075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,10 @@\n include \"db.php\";\n \n function getAllLanguages()\n {\n-   \n     $db = connectionDataBase();\n-\n     $query = $db->prepare(\"SELECT * FROM languages\");\n-\n-    \n     $query->execute();\n \n    \n     $languages = $query->fetchAll(PDO::FETCH_ASSOC);\n"
+                },
+                {
+                    "date": 1690224561048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,7 @@\n {\n     $db = connectionDataBase();\n     $query = $db->prepare(\"SELECT * FROM languages\");\n     $query->execute();\n-\n-   \n     $languages = $query->fetchAll(PDO::FETCH_ASSOC);\n-\n-    \n     return $languages;\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1690223907241,
+            "name": "Commit-0",
+            "content": "<?php\n\ninclude \"db.php\";\n\n"
+        }
+    ]
+}

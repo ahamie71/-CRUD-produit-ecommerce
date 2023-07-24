@@ -1,0 +1,406 @@
+{
+    "sourceFile": "modele/produit.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 97,
+            "patches": [
+                {
+                    "date": 1690215806167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690215813119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+<?php\n include \"database.php\";\n function getPosts()\n {\n     $db = connectionDataBase();\n"
+                },
+                {
+                    "date": 1690215822161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n-include \"database.php\";\n+\n+include \"d.php\";\n function getPosts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n"
+                },
+                {
+                    "date": 1690215831868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n-include \"d.php\";\n-function getPosts()\n+include \"db.php\";\n+function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n"
+                },
+                {
+                    "date": 1690215955855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690215975382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products., posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690215982132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products., posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idl, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690215988878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idl, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, .id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690215994728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, .id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts., posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690215999978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts., posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.referen, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216012975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.referen, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216018281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,posts.title,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216026102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,prdo,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216032228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,prdo,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216038364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.price,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216045054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.price,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceT,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216052426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceT,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTax,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216058282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTax,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxln,posts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216065761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxln,posts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,productsposts.content,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216091686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,productsposts.content,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.price,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216097654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.price,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTax,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216103436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTax,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216115628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.users.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216131717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.users.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quanusers.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216155987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quanusers.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,lang.prenom,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216161031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,lang.prenom,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216166431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languag,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216171923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languag,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName,categories.name FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216179882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName,categories.name FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName, FROM posts\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216188175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName, FROM posts\n+    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n     LEFT JOIN users ON posts.user_id = users.id\n     LEFT JOIN categories ON posts.category_id = categories.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n"
+                },
+                {
+                    "date": 1690216199754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n     LEFT JOIN users ON posts.user_id = users.id\n-    LEFT JOIN categories ON posts.category_id = categories.id\";\n+   \n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216206265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN users ON posts.user_id = users.id\n-   \n+    LEFT JOIN users ON posts.user_id = users.id\";\n+\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216214116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN users ON posts.user_id = users.id\";\n-\n+    LEFT JOIN languages ON posts.user_id = users.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216219479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON posts.user_id = users.id\";\n+    LEFT JOIN languages ON posts.us = users.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216228244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON posts.us = users.id\";\n+    LEFT JOIN languages ON posts.user_id = users.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216235680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON posts.user_id = users.id\";\n+    LEFT JOIN languages ON products.user_id = users.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216243059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON products.user_id = users.id\";\n+    LEFT JOIN languages ON products.idLang = users.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216250619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON products.idLang = users.id\";\n+    LEFT JOIN languages ON products.idLang = languages.id\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216256039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON products.idLang = languages.id\";\n+    LEFT JOIN languages ON products.idLang = languages.idlang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $articles=$stmt->fetchALL();\n      return $articles;\n"
+                },
+                {
+                    "date": 1690216262979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON products.idLang = languages.idlang\";\n+    LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $articles=$stmt->fetchALL();\n+     $pro=$stmt->fetchALL();\n      return $articles;\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216269751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $pro=$stmt->fetchALL();\n-     return $articles;\n+     $products=$stmt->fetchALL();\n+     return $products;\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216412216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n function getProducts()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON products.idLang = languages.idLang\";\n+    LEFT JOIN languages ON\n+     products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetchALL();\n      return $products;\n"
+                },
+                {
+                    "date": 1690216420512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.id , posts.reference, products.descriptions,products.priceTaxlncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-    LEFT JOIN languages ON\n+    $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products LEFT JOIN languages ON \n      products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetchALL();\n"
+                },
+                {
+                    "date": 1690216428141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n include \"db.php\";\n function getProducts()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products LEFT JOIN languages ON \n-     products.idLang = languages.idLang\";\n+    $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n+     LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetchALL();\n      return $products;\n"
+                },
+                {
+                    "date": 1690216803881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n include \"db.php\";\n-function getProducts()\n+function getProduct()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n"
+                },
+                {
+                    "date": 1690217116800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetchALL();\n      return $products;\n+     \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217898823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n function getProduct()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-     LEFT JOIN languages ON products.idLang = languages.idLang\";\n+     HINNER JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $products=$stmt->fetchALL();\n+     $products=$stmt->fetch();\n      return $products;\n      \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217904454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function getProduct()\n {\n     $db = connectionDataBase();\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n-     HINNER JOIN languages ON products.idLang = languages.idLang\";\n+     LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetch();\n      return $products;\n"
+                },
+                {
+                    "date": 1690217912726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetch();\n      return $products;\n-     \n+     var\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217919514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetch();\n      return $products;\n-     var\n+     var_dump($products);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217937242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $products=$stmt->fetch();\n-     return $products;\n+     $products=$stmt->fetchALL();\n+ \n      var_dump($products);\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217950426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $products=$stmt->fetchALL();\n- \n-     var_dump($products);\n+     $products=$stmt->fetch();\n+     return $products;\n+     var_dump($products)\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217957472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $products=$stmt->fetch();\n+     $products=$stmt->fetchALL();\n      return $products;\n-     var_dump($products)\n+     \n\\ No newline at end of file\n \n-}\n+}\n+var\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217964034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n      return $products;\n      \n \n }\n-var\n\\ No newline at end of file\n+var_dump($products)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217975946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetchALL();\n      return $products;\n-     \n+     var_dump($products);\n \n }\n\\ No newline at end of file\n-var_dump($products)\n+var_dump($products);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217988290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,9 @@\n     $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $products=$stmt->fetchALL();\n+     $products=$stmt->fetch();\n      return $products;\n      var_dump($products);\n \n-}\n\\ No newline at end of file\n-var_dump($products);\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217997210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetch();\n      return $products;\n-     var_dump($products);\n+     \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218004708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,5 @@\n      $stmt->execute();\n      $products=$stmt->fetch();\n      return $products;\n      \n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218491393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProduct()\n {\n     $db = connectionDataBase();\n-    $req =\"SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n+    $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetch();\n"
+                },
+                {
+                    "date": 1690218505488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n-     $products=$stmt->fetch();\n+     $products=$stmt->fetchAll();\n      return $products;\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690220836074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"db.php\";\n function getProduct()\n {\n     $db = connectionDataBase();\n-    $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.languageName FROM products\n+    $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n      LEFT JOIN languages ON products.idLang = languages.idLang\";\n      $stmt = $db->prepare($req);\n      $stmt->execute();\n      $products=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1690221014722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n      $stmt->execute();\n      $products=$stmt->fetchAll();\n      return $products;\n      \n-}\n\\ No newline at end of file\n+}\n+\n"
+                },
+                {
+                    "date": 1690221083169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,18 @@\n      $products=$stmt->fetchAll();\n      return $products;\n      \n }\n+function getPostById($id)\n+{\n+    \n+    $Connect = connectionDataBase();\n+    $req =\"SELECT posts.user_id, posts.id, posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+    LEFT JOIN users ON posts.user_id = users.id\n+    LEFT JOIN categories ON posts.category_id = categories.id \n+    WHERE posts.id =  $id\";\n+    $search = $Connect->prepare($req);\n+    $search->execute();\n+    $post = $search->fetch();\n+    return $post;\n \n+}\n"
+                },
+                {
+                    "date": 1690221092025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n      $products=$stmt->fetchAll();\n      return $products;\n      \n }\n-function getPostById($id)\n+function getProduct($id)\n {\n     \n     $Connect = connectionDataBase();\n     $req =\"SELECT posts.user_id, posts.id, posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n"
+                },
+                {
+                    "date": 1690221120543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,14 @@\n      $products=$stmt->fetchAll();\n      return $products;\n      \n }\n-function getProduct($id)\n+function getProductById($id)\n {\n     \n     $Connect = connectionDataBase();\n-    $req =\"SELECT posts.user_id, posts.id, posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n-    LEFT JOIN users ON posts.user_id = users.id\n-    LEFT JOIN categories ON posts.category_id = categories.id \n+    $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n+    LEFT JOIN languages ON products.idLang = languages.idLang\";\n     WHERE posts.id =  $id\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $post = $search->fetch();\n"
+                },
+                {
+                    "date": 1690221127045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n {\n     \n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n-    LEFT JOIN languages ON products.idLang = languages.idLang\";\n-    WHERE posts.id =  $id\";\n+    LEFT JOIN languages ON products.idLang = languages.idLang;\n+    WHERE p.id =  $id\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $post = $search->fetch();\n     return $post;\n"
+                },
+                {
+                    "date": 1690221135311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     \n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n-    WHERE p.id =  $id\";\n+    WHERE products.idProduct =  $id\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $post = $search->fetch();\n     return $post;\n"
+                },
+                {
+                    "date": 1690221218809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n      \n }\n function getProductById($id)\n {\n-    \n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n     WHERE products.idProduct =  $id\";\n"
+                },
+                {
+                    "date": 1690221315265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,4 +23,53 @@\n     $post = $search->fetch();\n     return $post;\n \n }\n+function deletepost($id)\n+{\n+    $Connect = connectionDataBase();\n+    $sql = \"DELETE FROM posts WHERE id= $id\";\n+    $delet = $Connect->prepare($sql);\n+    $delet->execute();\n+\n+}\n+function editPost($content, $id,$title)\n+{\n+    $Connect = connectionDataBase();\n+    $update = $Connect->prepare(\"UPDATE  posts SET content=:content , title=:title WHERE id = $id\");\n+    $update->execute(\n+        array(\n+            ':content' => $content,\n+            ':title' => $title\n+        )\n+    );\n+\n+}\n+\n+function addArticle()\n+{\n+\n+  if (isset($_POST['content']) && isset($_POST['title']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n+$imgPath =uploadPicture($_FILES['image']);\n+if ($imgPath){\n+    $content = $_POST['content'];\n+    $title = $_POST['title'];\n+    $user_id = $_SESSION['user']['id'];\n+    $category_id = $_POST['cat'];\n+    $created_at = date('Y-m-d H:i:s');\n+    $image =$imgPath;\n+\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+  createPost($user_id, $title, $content, $image, $created_at, $category_id);\n+  header('location:index.php?action=display');\n+  exit();\n+}\n+else{\n+\n+  echo \"probleme\";\n+}\n+  }\n+else{\n+  var_dump($_POST);\n+}\n+  \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690221329393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,32 +44,4 @@\n     );\n \n }\n \n-function addArticle()\n-{\n-\n-  if (isset($_POST['content']) && isset($_POST['title']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n-$imgPath =uploadPicture($_FILES['image']);\n-if ($imgPath){\n-    $content = $_POST['content'];\n-    $title = $_POST['title'];\n-    $user_id = $_SESSION['user']['id'];\n-    $category_id = $_POST['cat'];\n-    $created_at = date('Y-m-d H:i:s');\n-    $image =$imgPath;\n-\n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n-  createPost($user_id, $title, $content, $image, $created_at, $category_id);\n-  header('location:index.php?action=display');\n-  exit();\n-}\n-else{\n-\n-  echo \"probleme\";\n-}\n-  }\n-else{\n-  var_dump($_POST);\n-}\n-  \n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690223451328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,4 +44,24 @@\n     );\n \n }\n \n+function createPost($user_id,$title, $content,$image,$created_at,$category_id)\n+{\n+    $db = connectionDataBase();\n+    $query = $db->prepare(\"INSERT INTO posts(user_id,title,content,image,created_at,category_id)VALUES(?,?,?,?,?,?)\");\n+    $query->execute([\n+        $_SESSION['user']['id'],\n+        $title,\n+        $content,\n+        $image,\n+        $created_at,\n+        $category_id\n+        \n+       \n+\n+    ]); \n+     \n+    \n+}\n+\n+\n"
+                },
+                {
+                    "date": 1690223457862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     );\n \n }\n \n-function createPost($user_id,$title, $content,$image,$created_at,$category_id)\n+function createProduct($user_id,$title, $content,$image,$created_at,$category_id)\n {\n     $db = connectionDataBase();\n     $query = $db->prepare(\"INSERT INTO posts(user_id,title,content,image,created_at,category_id)VALUES(?,?,?,?,?,?)\");\n     $query->execute([\n"
+                },
+                {
+                    "date": 1690223462984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     );\n \n }\n \n-function createProduct($user_id,$title, $content,$image,$created_at,$category_id)\n+function createProduct()\n {\n     $db = connectionDataBase();\n     $query = $db->prepare(\"INSERT INTO posts(user_id,title,content,image,created_at,category_id)VALUES(?,?,?,?,?,?)\");\n     $query->execute([\n"
+                },
+                {
+                    "date": 1690223533318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,24 +44,8 @@\n     );\n \n }\n \n-function createProduct()\n-{\n-    $db = connectionDataBase();\n-    $query = $db->prepare(\"INSERT INTO posts(user_id,title,content,image,created_at,category_id)VALUES(?,?,?,?,?,?)\");\n-    $query->execute([\n-        $_SESSION['user']['id'],\n-        $title,\n-        $content,\n-        $image,\n-        $created_at,\n-        $category_id\n-        \n-       \n \n-    ]); \n-     \n-    \n }\n \n \n"
+                },
+                {
+                    "date": 1690223541220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,31 @@\n \n }\n \n \n+function createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n+{\n+    \n+\n+    // Prepare the SQL query\n+    $query = $db->prepare(\"INSERT INTO products (reference, description, priceTaxIncl, priceTaxExcl, idLang, quantity) VALUES (?, ?, ?, ?, ?, ?)\");\n+\n+    // Execute the query with the provided product details\n+    $query->execute([\n+        $reference,\n+        $description,\n+        $priceTaxIncl,\n+        $priceTaxExcl,\n+        $idLang,\n+        $quantity\n+    ]);\n+\n+    // Check if the insertion was successful\n+    if ($query->rowCount() > 0) {\n+        return true; // Product created successfully\n+    } else {\n+        return false; // Failed to create product\n+    }\n }\n \n \n+\n"
+                },
+                {
+                    "date": 1690223547374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n \n function createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n     \n+    $db = connectionDataBase();\n \n     // Prepare the SQL query\n     $query = $db->prepare(\"INSERT INTO products (reference, description, priceTaxIncl, priceTaxExcl, idLang, quantity) VALUES (?, ?, ?, ?, ?, ?)\");\n \n"
+                },
+                {
+                    "date": 1690223556989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,12 +50,12 @@\n {\n     \n     $db = connectionDataBase();\n \n-    // Prepare the SQL query\n+    \n     $query = $db->prepare(\"INSERT INTO products (reference, description, priceTaxIncl, priceTaxExcl, idLang, quantity) VALUES (?, ?, ?, ?, ?, ?)\");\n \n-    // Execute the query with the provided product details\n+  \n     $query->execute([\n         $reference,\n         $description,\n         $priceTaxIncl,\n@@ -63,9 +63,9 @@\n         $idLang,\n         $quantity\n     ]);\n \n-    // Check if the insertion was successful\n+    \n     if ($query->rowCount() > 0) {\n         return true; // Product created successfully\n     } else {\n         return false; // Failed to create product\n"
+                },
+                {
+                    "date": 1690224783332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include \"db.php\";\n+\n function getProduct()\n {\n     $db = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n@@ -65,11 +65,11 @@\n     ]);\n \n     \n     if ($query->rowCount() > 0) {\n-        return true; // Product created successfully\n+        return true; \n     } else {\n-        return false; // Failed to create product\n+        return false; \n     }\n }\n \n \n"
+                },
+                {
+                    "date": 1690225166493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,4 +73,5 @@\n }\n \n \n \n+\n"
+                },
+                {
+                    "date": 1690225189147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     $delet = $Connect->prepare($sql);\n     $delet->execute();\n \n }\n-function editPost($content, $id,$title)\n+function editPost()\n {\n     $Connect = connectionDataBase();\n     $update = $Connect->prepare(\"UPDATE  posts SET content=:content , title=:title WHERE id = $id\");\n     $update->execute(\n"
+                },
+                {
+                    "date": 1690225203520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     $delet = $Connect->prepare($sql);\n     $delet->execute();\n \n }\n-function editPost()\n+function edit($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n     $Connect = connectionDataBase();\n     $update = $Connect->prepare(\"UPDATE  posts SET content=:content , title=:title WHERE id = $id\");\n     $update->execute(\n"
+                },
+                {
+                    "date": 1690225282817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,20 +31,9 @@\n     $delet = $Connect->prepare($sql);\n     $delet->execute();\n \n }\n-function edit($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n-{\n-    $Connect = connectionDataBase();\n-    $update = $Connect->prepare(\"UPDATE  posts SET content=:content , title=:title WHERE id = $id\");\n-    $update->execute(\n-        array(\n-            ':content' => $content,\n-            ':title' => $title\n-        )\n-    );\n \n-}\n \n \n function createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n"
+                },
+                {
+                    "date": 1690225341721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,40 @@\n     $delet->execute();\n \n }\n \n+function updateProduct($idProduct, $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n+{\n+    // Assuming you have already established a database connection using the connectionDataBase() function\n+    $db = connectionDataBase();\n \n+    // Prepare the SQL query\n+    $query = $db->prepare(\"UPDATE products \n+                          SET reference = ?, \n+                              description = ?, \n+                              priceTaxIncl = ?, \n+                              priceTaxExcl = ?, \n+                              idLang = ?, \n+                              quantity = ? \n+                          WHERE idProduct = ?\");\n \n+    // Execute the query with the updated product details and product ID\n+    $result = $query->execute([\n+        $reference,\n+        $description,\n+        $priceTaxIncl,\n+        $priceTaxExcl,\n+        $idLang,\n+        $quantity,\n+        $idProduct\n+    ]);\n+\n+    // Return true if the update was successful, otherwise, return false\n+    return $result;\n+}\n+\n+\n+\n function createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n     \n     $db = connectionDataBase();\n"
+                },
+                {
+                    "date": 1690225350057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n                               idLang = ?, \n                               quantity = ? \n                           WHERE idProduct = ?\");\n \n-    // Execute the query with the updated product details and product ID\n+    \n     $result = $query->execute([\n         $reference,\n         $description,\n         $priceTaxIncl,\n"
+                },
+                {
+                    "date": 1690225355776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,12 +34,12 @@\n }\n \n function updateProduct($idProduct, $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n-    // Assuming you have already established a database connection using the connectionDataBase() function\n+   \n     $db = connectionDataBase();\n \n-    // Prepare the SQL query\n+\n     $query = $db->prepare(\"UPDATE products \n                           SET reference = ?, \n                               description = ?, \n                               priceTaxIncl = ?, \n"
+                },
+                {
+                    "date": 1690225438571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n     WHERE products.idProduct =  $id\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n-    $post = $search->fetch();\n+    $product = $search->fetch();\n     return $post;\n \n }\n function deletepost($id)\n"
+                },
+                {
+                    "date": 1690225459526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,18 +11,18 @@\n      $products=$stmt->fetchAll();\n      return $products;\n      \n }\n-function getProductById($id)\n+function getProductById($idPo)\n {\n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n     WHERE products.idProduct =  $id\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $product = $search->fetch();\n-    return $post;\n+    return $product;\n \n }\n function deletepost($id)\n {\n"
+                },
+                {
+                    "date": 1690225465280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n      $products=$stmt->fetchAll();\n      return $products;\n      \n }\n-function getProductById($idPo)\n+function getProductById($idPr)\n {\n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n"
+                },
+                {
+                    "date": 1690225471916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,14 @@\n      $products=$stmt->fetchAll();\n      return $products;\n      \n }\n-function getProductById($idPr)\n+function getProductById($idProduct)\n {\n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n-    WHERE products.idProduct =  $id\";\n+    WHERE products.idProduct =  $idPorduct\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $product = $search->fetch();\n     return $product;\n"
+                },
+                {
+                    "date": 1690225480491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n {\n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n-    WHERE products.idProduct =  $idPorduct\";\n+    WHERE products.idProduct =  $idProduct\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $product = $search->fetch();\n     return $product;\n"
+                },
+                {
+                    "date": 1690226230073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n \n }\n function deletepost($id)\n {\n+    \n     $Connect = connectionDataBase();\n     $sql = \"DELETE FROM posts WHERE id= $id\";\n     $delet = $Connect->prepare($sql);\n     $delet->execute();\n"
+                },
+                {
+                    "date": 1690226238367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n      \n }\n function getProductById($idProduct)\n {\n+    \n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n     WHERE products.idProduct =  $idProduct\";\n@@ -25,9 +26,9 @@\n \n }\n function deletepost($id)\n {\n-    \n+\n     $Connect = connectionDataBase();\n     $sql = \"DELETE FROM posts WHERE id= $id\";\n     $delet = $Connect->prepare($sql);\n     $delet->execute();\n"
+                },
+                {
+                    "date": 1690227410832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,18 @@\n      \n }\n function getProductById($idProduct)\n {\n-    \n+\n     $Connect = connectionDataBase();\n     $req =\" SELECT products.idLang, products.idProduct , products.reference, products.description,products.priceTaxIncl,products.priceTaxExcl,products.quantity,languages.LanguageName FROM products\n     LEFT JOIN languages ON products.idLang = languages.idLang;\n     WHERE products.idProduct =  $idProduct\";\n     $search = $Connect->prepare($req);\n     $search->execute();\n     $product = $search->fetch();\n     return $product;\n+   \n \n }\n function deletepost($id)\n {\n@@ -57,9 +58,9 @@\n         $priceTaxIncl,\n         $priceTaxExcl,\n         $idLang,\n         $quantity,\n-        $idProduct\n+       \n     ]);\n \n     // Return true if the update was successful, otherwise, return false\n     return $result;\n"
+                },
+                {
+                    "date": 1690227425146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     $delet->execute();\n \n }\n \n-function updateProduct($idProduct, $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n+function updateProduct( $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n    \n     $db = connectionDataBase();\n \n"
+                },
+                {
+                    "date": 1690227815907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,14 +35,14 @@\n     $delet->execute();\n \n }\n \n-function updateProduct( $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n+function updateProduct($idProduct, $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n {\n-   \n+    // Assuming you have already established a database connection using the connectionDataBase() function\n     $db = connectionDataBase();\n \n-\n+    // Prepare the SQL query\n     $query = $db->prepare(\"UPDATE products \n                           SET reference = ?, \n                               description = ?, \n                               priceTaxIncl = ?, \n@@ -50,17 +50,17 @@\n                               idLang = ?, \n                               quantity = ? \n                           WHERE idProduct = ?\");\n \n-    \n+    // Execute the query with the updated product details and product ID\n     $result = $query->execute([\n         $reference,\n         $description,\n         $priceTaxIncl,\n         $priceTaxExcl,\n         $idLang,\n         $quantity,\n-       \n+        $idProduct\n     ]);\n \n     // Return true if the update was successful, otherwise, return false\n     return $result;\n"
+                },
+                {
+                    "date": 1690228950966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,7 +93,14 @@\n         return false; \n     }\n }\n \n+function deleteProduct($idProduct)\n+{\n+    $Connect = connectionDataBase();\n+    $sql = \"DELETE FROM products WHERE id= $idProduct\";\n+    $delet = $Connect->prepare($sql);\n+    $delet->execute();\n \n+}\n \n \n"
+                },
+                {
+                    "date": 1690229059174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,14 +93,5 @@\n         return false; \n     }\n }\n \n-function deleteProduct($idProduct)\n-{\n-    $Connect = connectionDataBase();\n-    $sql = \"DELETE FROM products WHERE id= $idProduct\";\n-    $delet = $Connect->prepare($sql);\n-    $delet->execute();\n \n-}\n-\n-\n"
+                },
+                {
+                    "date": 1690229066138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,6 +92,20 @@\n     } else {\n         return false; \n     }\n }\n+function deleteProduct($idProduct)\n+{\n+   \n+    $db = connectionDataBase();\n \n+   \n+    $query = $db->prepare(\"DELETE FROM products WHERE idProduct = ?\");\n \n+    // Execute the query with the product ID\n+    $result = $query->execute([$idProduct]);\n+\n+    // Return true if the deletion was successful, otherwise, return false\n+    return $result;\n+}\n+\n+\n"
+                }
+            ],
+            "date": 1690215806167,
+            "name": "Commit-0",
+            "content": "include \"database.php\";\nfunction getPosts()\n{\n    $db = connectionDataBase();\n    $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n    LEFT JOIN users ON posts.user_id = users.id\n    LEFT JOIN categories ON posts.category_id = categories.id\";\n     $stmt = $db->prepare($req);\n     $stmt->execute();\n     $articles=$stmt->fetchALL();\n     return $articles;\n\n}"
+        }
+    ]
+}

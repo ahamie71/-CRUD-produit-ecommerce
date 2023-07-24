@@ -1,0 +1,38 @@
+{
+    "sourceFile": "templates/acceuil.phtml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1690229868293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690229881791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n-htm\n\\ No newline at end of file\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+<head>\n+    <meta charset=\"UTF-8\">\n+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+    <title>Document</title>\n+</head>\n+<body>\n+    <a href\n+</body>\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229889200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    <a href\n+    <a href=\"index.php\"\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229894968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    <a href=\"index.php\"\n+    <a href=\"index.php?\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229900299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    <a href=\"index.php?\n+    <a href=\"index.php?action=display\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690229908741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    <a href=\"index.php?action=display\n+    <a href=\"index.php?action=display\">espace Admin\n </body>\n </html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1690229868293,
+            "name": "Commit-0",
+            "content": "htm"
+        }
+    ]
+}

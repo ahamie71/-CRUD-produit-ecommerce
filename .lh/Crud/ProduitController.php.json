@@ -1,0 +1,462 @@
+{
+    "sourceFile": "Crud/ProduitController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 111,
+            "patches": [
+                {
+                    "date": 1690216496179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1690216510805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n+<?php\n+\n function getarticle()\n {\n   \n   require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n \n-  $articles = getPosts();\n+  $products = getPosts();\n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216518717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function getarticle()\n {\n   \n-  require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n+  \n \n-  $products = getPosts();\n+  $products = ();\n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216529541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function getarticle()\n {\n   \n-  \n+  require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n \n   $products = ();\n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216633464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n {\n   \n   require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n \n-  $products = ();\n+  \n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216642442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function getarticle()\n {\n   \n-  require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n+  r\n \n   \n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216654887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function getarticle()\n {\n   \n-  r\n+  \n \n   \n-  require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n+  require_once(dirname(__FILE__, 2) . '/templates/.php');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216660828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n   \n   \n \n   \n-  require_once(dirname(__FILE__, 2) . '/templates/.php');\n+  require_once(dirname(__FILE__, 2) . '/templates/ Crud.phtml');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216670339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n <?php\n \n function getarticle()\n {\n-  \n-  \n \n-  \n-  require_once(dirname(__FILE__, 2) . '/templates/ Crud.phtml');\n+  require_once(dirname(__FILE__, 2) . '/templates/Crud.phtml');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216788035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n <?php\n \n-function getarticle()\n+function getProducts()\n {\n \n+\n+\n   require_once(dirname(__FILE__, 2) . '/templates/Crud.phtml');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216795607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n <?php\n \n function getProducts()\n {\n-\n-\n-\n   require_once(dirname(__FILE__, 2) . '/templates/Crud.phtml');\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690216818482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n \n function getProducts()\n {\n   require_once(dirname(__FILE__, 2) . '/templates/Crud.phtml');\n+  getProduct \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217324564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n \n function getProducts()\n {\n   require_once(dirname(__FILE__, 2) . '/templates/Crud.phtml');\n-  getProduct \n+  \n+  getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217334292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n function getProducts()\n {\n-  require_once(dirname(__FILE__, 2) . '/templates/Crud.phtml');\n-  \n+\n+  header('location:index.php?action=display');\n   getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217352890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n function getProducts()\n {\n \n-  header('location:index.php?action=display');\n+  header('location:?index.php?action=display');\n   getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217360702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n function getProducts()\n {\n \n-  header('location:?index.php?action=display');\n+  header('location:./../puindex.php?action=display');\n   getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217380232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n function getProducts()\n {\n \n-  header('location:./../puindex.php?action=display');\n+  \n   getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217420086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,11 @@\n \n function getProducts()\n {\n \n+    require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n+\n+  $articles = getPosts();\n+  require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n   \n-  getProduct(); \n+   getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217433325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n {\n \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n \n-  $articles = getPosts();\n+    $products = getPosts();\n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n   \n    getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217443307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n \n function getProducts()\n {\n \n-    require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n+    \n \n-    $products = getPosts();\n+    $products = getProducts();\n   require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n   \n    getProduct(); \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217455714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \n     \n \n     $products = getProducts();\n-  require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n+  require_once(dirname(__FILE__, 2) . '/templates/crud.php');\n   \n-   getProduct(); \n+  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217466958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \n     \n \n     $products = getProducts();\n-  require_once(dirname(__FILE__, 2) . '/templates/crud.php');\n+  require_once(dirname(__FILE__,) . '/templates/Crud.php');\n   \n   \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217668335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,8 @@\n <?php\n \n function getProducts()\n {\n-\n-    \n-\n     $products = getProducts();\n   require_once(dirname(__FILE__,) . '/templates/Crud.php');\n   \n   \n"
+                },
+                {
+                    "date": 1690217714368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    $products = getProducts();\n+    $products = getProduct();\n   require_once(dirname(__FILE__,) . '/templates/Crud.php');\n   \n   \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217724031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,6 @@\n function getProducts()\n {\n     $products = getProduct();\n   require_once(dirname(__FILE__,) . '/templates/Crud.php');\n-  \n-  \n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690217733736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n function getProducts()\n {\n     $products = getProduct();\n-  require_once(dirname(__FILE__,) . '/templates/Crud.php');\n+   require_once(dirname(__FILE__,) . '/templates/Crud.php');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218259878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    $products = getProduct();\n-   require_once(dirname(__FILE__,) . '/templates/Crud.php');\n+    \n+     $products = getProduct();\n+    require_once(dirname(__FILE__,) . '/templates/Crud.php');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218294602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    \n-     $products = getProduct();\n+\n+     $products = getProduct()\n     require_once(dirname(__FILE__,) . '/templates/Crud.php');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218303007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-\n-     $products = getProduct()\n     require_once(dirname(__FILE__,) . '/templates/Crud.php');\n-\n+     $products = getProduct();\n+    require_once(dirname(__FILE__,) . '/templates/Crud.php');\n+    \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218319135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,) . '/templates/Crud.php');\n+    require_once(dirname(__FILE__,2) . '/templates/Crud.php');\n      $products = getProduct();\n-    require_once(dirname(__FILE__,) . '/templates/Crud.php');\n+   \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218331825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2) . '/templates/Crud.php');\n+    require_once(dirname(__FILE__,2) .'/templates/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218344526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2) .'/templates/Crud.php');\n+    require_once(dirname(__FILE__,2) .'/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218357457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2) .'/Crud.php');\n+    require_once(dirname(__FILE__,2).'/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218375987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2).'/Crud.php');\n+    require_once(dirname(__FILE__).'/te/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218393714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__).'/te/Crud.php');\n+    require_once(dirname(__FILE__,).'/templates/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218404231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,).'/templates/Crud.php');\n+    require_once(dirname(__FILE__,1).'templates/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218410343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,1).'templates/Crud.php');\n+    require_once(dirname(__FILE__,3).'/templates/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218416831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,3).'/templates/Crud.php');\n+    require_once(dirname(__FILE__,1).'templates/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218435049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,1).'templates/Crud.php');\n+    require_once(dirname(__FILE__,2).'/templates/Crud.php');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218445974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2).'/templates/Crud.php');\n+    require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n      $products = getProduct();\n    \n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218680458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,6 @@\n function getProducts()\n {\n     require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n      $products = getProduct();\n-   \n-    \n+     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218686128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n+    \n      $products = getProduct();\n      \n+     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218692165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n <?php\n \n+inc\n function getProducts()\n {\n     \n      $products = getProduct();\n+     require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n      \n-     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690218698153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-inc\n+include'.\n function getProducts()\n {\n     \n      $products = getProduct();\n"
+                },
+                {
+                    "date": 1690218706242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include'.\n+'include ./.\n function getProducts()\n {\n     \n      $products = getProduct();\n"
+                },
+                {
+                    "date": 1690218712619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-'include ./.\n+include('')\n function getProducts()\n {\n     \n      $products = getProduct();\n"
+                },
+                {
+                    "date": 1690218718314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include('')\n+include('./../prodiu')\n function getProducts()\n {\n     \n      $products = getProduct();\n"
+                },
+                {
+                    "date": 1690218728275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include('./../prodiu')\n+include('./../produit.php')\n function getProducts()\n {\n     \n      $products = getProduct();\n"
+                },
+                {
+                    "date": 1690218745311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include('./../produit.php')\n+\n function getProducts()\n {\n     \n      $products = getProduct();\n"
+                },
+                {
+                    "date": 1690218751004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n \n function getProducts()\n {\n     \n"
+                },
+                {
+                    "date": 1690218765896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n+include \"db.php\";\n \n function getProducts()\n {\n     \n"
+                },
+                {
+                    "date": 1690218777972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include \"db.php\";\n+include \"./produit.php\";\n \n function getProducts()\n {\n     \n"
+                },
+                {
+                    "date": 1690218784704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-include \"./produit.php\";\n+include \"./modele.produit.php\";\n \n function getProducts()\n {\n     \n"
+                },
+                {
+                    "date": 1690221344567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,39 @@\n <?php\n \n-include \"./modele.produit.php\";\n+include \"./modele/produit.php\";\n \n function getProducts()\n {\n     \n      $products = getProduct();\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n      \n+}\n+function addArticle()\n+{\n+\n+  if (isset($_POST['content']) && isset($_POST['title']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n+$imgPath =uploadPicture($_FILES['image']);\n+if ($imgPath){\n+    $content = $_POST['content'];\n+    $title = $_POST['title'];\n+    $user_id = $_SESSION['user']['id'];\n+    $category_id = $_POST['cat'];\n+    $created_at = date('Y-m-d H:i:s');\n+    $image =$imgPath;\n+\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+  createPost($user_id, $title, $content, $image, $created_at, $category_id);\n+  header('location:index.php?action=display');\n+  exit();\n+}\n+else{\n+\n+  echo \"probleme\";\n+}\n+  }\n+else{\n+  var_dump($_POST);\n+}\n+  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690221359063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['content']) && isset($_POST['title']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n+  if (isset($_POST['refere']) && isset($_POST['title']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221365947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['refere']) && isset($_POST['title']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n+  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221372527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['cat']) && isset($_FILES['image'])) {\n+  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['']) && isset($_FILES['image'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221403413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['']) && isset($_FILES['image'])) {\n+  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['price']) && isset($_FILES['image'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221411565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['price']) && isset($_FILES['image'])) {\n+  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_FILES['image'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221417700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_FILES['image'])) {\n+  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['image'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221423091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['image'])) {\n+  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n     $content = $_POST['content'];\n     $title = $_POST['title'];\n"
+                },
+                {
+                    "date": 1690221444412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,14 +14,9 @@\n \n   if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n $imgPath =uploadPicture($_FILES['image']);\n if ($imgPath){\n-    $content = $_POST['content'];\n-    $title = $_POST['title'];\n-    $user_id = $_SESSION['user']['id'];\n-    $category_id = $_POST['cat'];\n-    $created_at = date('Y-m-d H:i:s');\n-    $image =$imgPath;\n+   ;\n \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221458344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,10 @@\n {\n \n   if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n $imgPath =uploadPicture($_FILES['image']);\n-if ($imgPath){\n-   ;\n \n+\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n"
+                },
+                {
+                    "date": 1690221678718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n function addArticle()\n {\n \n   if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n-$imgPath =uploadPicture($_FILES['image']);\n \n \n+  \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n"
+                },
+                {
+                    "date": 1690221708567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n+  if (!isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221716601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (!isset($_POST['reference']) && isset($_POST['description']) && isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n+  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221726162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && isset($_POST['priceTaxExcl'])) {\n+  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl'])) {\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221779594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,13 +21,4 @@\n   header('location:index.php?action=display');\n   exit();\n }\n else{\n-\n-  echo \"probleme\";\n-}\n-  }\n-else{\n-  var_dump($_POST);\n-}\n-  \n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690221784833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,6 @@\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n }\n-else{\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690221792487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl'])) {\n+  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) ) {\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221810007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) ) {\n+  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['') {\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221820590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['') {\n+  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity') {\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221874001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n function addArticle()\n {\n \n-  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity') {\n+  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1690221888285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n {\n \n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n-\n+    $reference = $_POST['reference'];\n+    \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221895038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n \n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n     $reference = $_POST['reference'];\n-    \n+    $description = $_POST['description'];\n+    $\n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221904921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n-    $\n+    $priceTaxIncl\n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221910341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n-    $priceTaxIncl\n+    $priceTaxIncl=$_P\n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221916326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n-    $priceTaxIncl=$_P\n+    $priceTaxIncl=$_POST['priceTaxIncl'];\n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221921803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n+    \n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221938976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n-    \n+    $priceTaxExcl=$_POST['priceTaxExcl'];\n+    $quan\n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221945495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n-    $quan\n+    $quantity= $_POST['quantity'];\n   \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n"
+                },
+                {
+                    "date": 1690221961549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n     $quantity= $_POST['quantity'];\n   \n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+    \n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n }\n"
+                },
+                {
+                    "date": 1690221975189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n {\n \n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n \n+    \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n"
+                },
+                {
+                    "date": 1690221989794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n function addArticle()\n {\n \n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n-\n-    \n+     \n+    $error\n+  }\n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n"
+                },
+                {
+                    "date": 1690221995073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n {\n \n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n      \n-    $error\n+    $error='';\n   }\n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n"
+                },
+                {
+                    "date": 1690222117891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,4 @@\n   header('location:index.php?action=display');\n   exit();\n }\n \n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690222125039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,5 @@\n     \n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n-}\n \n"
+                },
+                {
+                    "date": 1690222130961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,4 +26,5 @@\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1690222145033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,7 @@\n     \n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n+}\n+}\n\\ No newline at end of file\n \n-}\n"
+                },
+                {
+                    "date": 1690222152763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n      \n     $error='';\n   }\n+  else{\n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n@@ -26,5 +27,6 @@\n   createPost($user_id, $title, $content, $image, $created_at, $category_id);\n   header('location:index.php?action=display');\n   exit();\n }\n-}\n\\ No newline at end of file\n+}\n+\n"
+                },
+                {
+                    "date": 1690222165746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n      \n }\n function addArticle()\n {\n-\n+    $error=''\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n      \n     $error='';\n   }\n"
+                },
+                {
+                    "date": 1690222178818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n      \n }\n function addArticle()\n {\n-    $error=''\n+    $error='';\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n      \n-    $error='';\n+    $error='no';\n   }\n   else{\n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n@@ -23,9 +23,9 @@\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n     $quantity= $_POST['quantity'];\n   \n     \n-  createPost($user_id, $title, $content, $image, $created_at, $category_id);\n+\n   header('location:index.php?action=display');\n   exit();\n }\n }\n"
+                },
+                {
+                    "date": 1690222184043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,15 +16,16 @@\n      \n     $error='no';\n   }\n   else{\n+    \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n     $quantity= $_POST['quantity'];\n   \n-    \n+     \n \n   header('location:index.php?action=display');\n   exit();\n }\n"
+                },
+                {
+                    "date": 1690222437842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n      \n     $error='no';\n   }\n   else{\n-    \n+\n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n@@ -28,6 +28,7 @@\n \n   header('location:index.php?action=display');\n   exit();\n }\n+\n }\n \n"
+                },
+                {
+                    "date": 1690222453202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function getProducts()\n {\n     \n      $products = getProduct();\n-     require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n+ \n      \n }\n function addArticle()\n {\n"
+                },
+                {
+                    "date": 1690222458923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n \n   header('location:index.php?action=display');\n   exit();\n }\n-\n+require_once(dirname(__FILE__,2).'/templates/.phtml');\n }\n \n"
+                },
+                {
+                    "date": 1690222487559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n include \"./modele/produit.php\";\n \n function getProducts()\n {\n-    \n+    require_once(dirname(__FILE__,2).'/templates/formAjout.phtml');\n      $products = getProduct();\n  \n      \n }\n@@ -28,7 +28,7 @@\n \n   header('location:index.php?action=display');\n   exit();\n }\n-require_once(dirname(__FILE__,2).'/templates/.phtml');\n+require_once(dirname(__FILE__,2).'/templates/formAjout.phtml');\n }\n \n"
+                },
+                {
+                    "date": 1690222507981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n include \"./modele/produit.php\";\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2).'/templates/formAjout.phtml');\n+    require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n      $products = getProduct();\n+     require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n function addArticle()\n"
+                },
+                {
+                    "date": 1690222594268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,14 @@\n include \"./modele/produit.php\";\n \n function getProducts()\n {\n-    require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n      $products = getProduct();\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n-function addArticle()\n+function addProuct()\n {\n     $error='';\n   if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n      \n"
+                },
+                {
+                    "date": 1690223584905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n     $quantity= $_POST['quantity'];\n   \n      \n-\n+  \n   header('location:index.php?action=display');\n   exit();\n }\n require_once(dirname(__FILE__,2).'/templates/formAjout.phtml');\n"
+                },
+                {
+                    "date": 1690223598554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n     $quantity= $_POST['quantity'];\n   \n      \n-  \n+   createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n   header('location:index.php?action=display');\n   exit();\n }\n require_once(dirname(__FILE__,2).'/templates/formAjout.phtml');\n"
+                },
+                {
+                    "date": 1690223603621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n     $quantity= $_POST['quantity'];\n-  \n+    \n      \n    createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n   header('location:index.php?action=display');\n   exit();\n"
+                },
+                {
+                    "date": 1690223608918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     $error='no';\n   }\n   else{\n \n+    \n     $reference = $_POST['reference'];\n     $description = $_POST['description'];\n     $priceTaxIncl=$_POST['priceTaxIncl'];\n     $priceTaxExcl=$_POST['priceTaxExcl'];\n"
+                },
+                {
+                    "date": 1690223700987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,28 +8,6 @@\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n-function addProuct()\n-{\n-    $error='';\n-  if (!isset($_POST['reference']) && !isset($_POST['description']) && !isset($_POST['priceTaxIncl']) && !isset($_POST['priceTaxExcl']) && !isset($_POST['quantity'])){\n-     \n-    $error='no';\n-  }\n-  else{\n \n-    \n-    $reference = $_POST['reference'];\n-    $description = $_POST['description'];\n-    $priceTaxIncl=$_POST['priceTaxIncl'];\n-    $priceTaxExcl=$_POST['priceTaxExcl'];\n-    $quantity= $_POST['quantity'];\n-    \n-     \n-   createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity)\n-  header('location:index.php?action=display');\n-  exit();\n-}\n-require_once(dirname(__FILE__,2).'/templates/formAjout.phtml');\n-}\n \n"
+                },
+                {
+                    "date": 1690223746044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,42 @@\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n+function addProduct()\n+{\n+    // Check if form fields are set and not empty\n+    if (\n+        empty($_POST['reference']) ||\n+        empty($_POST['description']) ||\n+        empty($_POST['priceTaxIncl']) ||\n+        empty($_POST['priceTaxExcl']) ||\n+        empty($_POST['quantity'])\n+    ) {\n+        $error = 'Please fill in all the required fields.';\n+    } else {\n+        // Sanitize the form data (for security)\n+        $reference = $_POST['reference'];\n+        $description = $_POST['description'];\n+        $priceTaxIncl = $_POST['priceTaxIncl'];\n+        $priceTaxExcl = $_POST['priceTaxExcl'];\n+        $quantity = $_POST['quantity'];\n+        $category_id = $_POST['cat'];\n+        \n+        // Assuming you have the function createProduct() implemented as shown in the previous responses\n \n+        // Call the createProduct() function to add the product to the database\n+        $result = createProduct($reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity);\n \n+        if ($result) {\n+            // Product created successfully, redirect to the display page\n+            header('Location: index.php?action=display');\n+            exit();\n+        } else {\n+            // Failed to create the product, show an error message\n+            $error = 'Failed to create product.';\n+        }\n+    }\n+    require_once(dirname(__FILE__, 2) . '/templates/formAjout.phtml');\n+}\n+\n+\n"
+                },
+                {
+                    "date": 1690223753653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         $description = $_POST['description'];\n         $priceTaxIncl = $_POST['priceTaxIncl'];\n         $priceTaxExcl = $_POST['priceTaxExcl'];\n         $quantity = $_POST['quantity'];\n-        $category_id = $_POST['cat'];\n+        $idLang = $_POST['cat'];\n         \n         // Assuming you have the function createProduct() implemented as shown in the previous responses\n \n         // Call the createProduct() function to add the product to the database\n"
+                },
+                {
+                    "date": 1690224635372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n function getProducts()\n {\n      $products = getProduct();\n+     getAllLanguages\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n"
+                },
+                {
+                    "date": 1690224643261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n function getProducts()\n {\n      $products = getProduct();\n-     getAllLanguages\n+     $languages=getAllLanguages\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n"
+                },
+                {
+                    "date": 1690224648701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n function getProducts()\n {\n      $products = getProduct();\n-     $languages=getAllLanguages\n+     $languages=getAllLanguages();\n      require_once(dirname(__FILE__,2).'/templates/Crud.phtml');\n  \n      \n }\n"
+                },
+                {
+                    "date": 1690224655874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n <?php\n \n include \"./modele/produit.php\";\n+include \"./modele/produit.php\";\n \n+\n function getProducts()\n {\n      $products = getProduct();\n      $languages=getAllLanguages();\n"
+                },
+                {
+                    "date": 1690224661246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n include \"./modele/produit.php\";\n-include \"./modele/lan.php\";\n+include \"./modele/lang.php\";\n \n \n function getProducts()\n {\n"
+                },
+                {
+                    "date": 1690229009877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,8 +74,9 @@\n $product = getProductById($idProduct);\n require_once(dirname(__FILE__, 2) . '/templates/formModification.phtml');\n }\n \n+\n if (isset($_GET['id'])) {\n     $idProduct = $_GET['id'];\n \n     // Assuming you have the function deleteProduct() implemented as shown below\n"
+                }
+            ],
+            "date": 1690216496179,
+            "name": "Commit-0",
+            "content": "function getarticle()\n{\n  \n  require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n\n  $articles = getPosts();\n  require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n}"
+        }
+    ]
+}
