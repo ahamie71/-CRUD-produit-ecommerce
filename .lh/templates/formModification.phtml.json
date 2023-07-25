@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 31,
+            "activePatchIndex": 43,
             "patches": [
                 {
                     "date": 1690227591449,
@@ -132,6 +132,54 @@
                 {
                     "date": 1690228649425,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,13 +34,14 @@\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n                 <div class=\"form-group\">\n-                    <label>Descriptipn</label>\n-                    <div class=\"form-outline mb-4\">\n-                        <textarea class=\"form-control\" id=\"form4Example3\" rows=\"4\"   value= \"<?php echo $product['description']; ?>\"  name=\"description\"></textarea>\n-                        <label class=\"form-label\" for=\"form4Example3\"></label>\n-                    </div>\n+                <label>Description</label>\n+<div class=\"form-outline mb-4\">\n+    <textarea class=\"form-control\" id=\"form4Example3\" rows=\"4\" name=\"description\"><?php echo htmlspecialchars($product['description']); ?></textarea>\n+    <label class=\"form-label\" for=\"form4Example3\"></label>\n+</div>\n+\n                     <label>PriceTaxlncl</label>\n                     <div class=\"form-outline mb-4\">\n                     <input type=\"number\" name=\"priceTaxIncl\" id=\"priceTaxIncl\" step=\"0.01\"  value=\"<?php echo $product['priceTaxIncl']; ?>\" required>\n                         <label class=\"form-label\" for=\"form4Example3\"></label>\n"
+                },
+                {
+                    "date": 1690296031290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=create\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=c\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296037066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=c\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296045015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296061704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296066808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296074916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?php\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php echo $product\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296087214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?php echo $product\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php echo $product[idlang\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296092385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?php echo $product[idlang\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php echo $product[idLang\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296098111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?php echo $product[idLang\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php echo $product['idLang']\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296103725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?php echo $product['idLang']\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php echo $product['idLang']?<\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296109625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n \n-            <form action=\"index.php?action=edit&id=<?php echo $product['idLang']?<\" method=\"POST\" enctype=\"multipart/form-data\">\n+            <form action=\"index.php?action=edit&id=<?php echo $product['idLang'];?>\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n                         placeholder=\"enter a reference\"></div>\n"
+                },
+                {
+                    "date": 1690296132168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,11 +25,8 @@\n \n \n         <div class=\"container\">\n \n-\n-\n-\n             <form action=\"index.php?action=edit&id=<?php echo $product['idLang'];?>\" method=\"POST\" enctype=\"multipart/form-data\">\n                 <h2 class=\"text-center\"><strong>Creer</strong> un produit </h2>\n                 <label>Reference</label>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\"     value=\"<?php echo $product['reference']; ?>\"required=\"required\" name=\"reference\"\n"
                 }
             ],
             "date": 1690227591449,

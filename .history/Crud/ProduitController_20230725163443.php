@@ -57,34 +57,8 @@ function addProduct()
  function modifProduct()
 
 {
-    if (isset($_GET['id'])) {
-        $idProduct = $_GET['id'];
-        $product = getProductById($idProduct);
-
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        // Récupérez les données du formulaire d'édition
-        $reference = $_POST['reference'];
-        $description = $_POST['description'];
-        $priceTaxIncl = $_POST['priceTaxIncl'];
-        $priceTaxExcl = $_POST['priceTaxExcl'];
-        $quantity = $_POST['quantity'];
-        $idLang = $_POST['cat'];
-
-        // Mettez à jour le produit en base de données
-        $result = updateProduct($idProduct, $reference, $description, $priceTaxIncl, $priceTaxExcl, $idLang, $quantity);
-
-        if ($result) {
-            header('Location: index.php?action=AfficheCrud');
-            exit();
-        } else {
-            $error = 'Failed to update product.';
-        }
-    }
-
-    require_once(dirname(__FILE__, 2) . '/templates/formModification.phtml');
+  
 }
-
-
 
 
 function DeletProduct()
@@ -106,4 +80,4 @@ if (isset($_GET['id'])) {
 }
 }
 
-}
+

@@ -57,9 +57,9 @@ function addProduct()
  function modifProduct()
 
 {
-    if (isset($_GET['id'])) {
-        $idProduct = $_GET['id'];
-        $product = getProductById($idProduct);
+    $idProduct = $_GET['id'];
+
+    $product = getProductById($idProduct);
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Récupérez les données du formulaire d'édition
@@ -81,7 +81,7 @@ function addProduct()
         }
     }
 
-    require_once(dirname(__FILE__, 2) . '/templates/formModification.phtml');
+    require_once(dirname(__FILE__, 2) . '/templates/EditProduct.php');
 }
 
 
@@ -106,4 +106,4 @@ if (isset($_GET['id'])) {
 }
 }
 
-}
+

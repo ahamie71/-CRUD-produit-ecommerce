@@ -81,7 +81,7 @@ function addProduct()
         }
     }
 
-    require_once(dirname(__FILE__, 2) . '/templates/formModification.phtml');
+    require_once(dirname(__FILE__, 2) . '/Vi/EditProduct.php');
 }
 
 
@@ -106,4 +106,4 @@ if (isset($_GET['id'])) {
 }
 }
 
-}
+
